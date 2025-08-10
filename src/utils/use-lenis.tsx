@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 export function UseLenis() {
   useEffect(() => {
-    const lenis = new Lenis({
+    new Lenis({
       autoRaf: true,
     });
   }, [])
