@@ -1,4 +1,4 @@
-import { Geist, Quicksand } from "next/font/google";
+import { Geist, Quicksand, Tai_Heritage_Pro } from "next/font/google";
 
 export const sans = Geist({
   variable: "--font-sans",
@@ -10,4 +10,10 @@ export const stylized = Quicksand({
   variable: "--font-stylized",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+})
+
+export const serif = Tai_Heritage_Pro({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  weight: ["400", "700"],
 })
