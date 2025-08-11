@@ -52,7 +52,7 @@ export default function Page() {
     <nav className="fixed z-50 w-full bg-transparent">
       <section className="max-w-7xl mx-auto w-[90%] flex justify-between items-center py-10 px-5 gap-5">
         {/* Logo */}
-        <div className="text-3xl font-medium text-white font-serif italic tracking-tight">HimalyanVibes</div>
+        <div className="text-3xl font-medium -ml-2.5 text-white font-serif italic tracking-tight">HimalyanVibes</div>
         {/* Links */}
         <div className="text-neutral-900 bg-white flex gap-7.5 py-2.5 px-7.5 rounded-full">
           <div>Home</div>
@@ -175,17 +175,35 @@ export default function Page() {
       </div>
     </section>
     {/* Section */}
-    <section className="min-h-screen">
+    <section className="py-30">
       <div className="max-w-7xl mx-auto w-[90%]">
-        <div className="grid grid-cols-6 text-7xl font-stylized font-medium tracking-tighter mt-50">
-          <div className="col-span-2"></div>
-          <div className="col-span-4">
-            Vibes are
+        {/* Copy */}
+        <div className="flex justify-between w-full mb-30">
+          <div>
+            <div className="text-6xl font-stylized tracking-tighter">
+              Beyond the <br />
+              <span className="font-serif tracking-tight italic -ml-1">Ordinary</span>
+            </div>
           </div>
-          <div className="col-span-3"></div>
-          <div className="col-span-3">
-            the best
+          <div>
+            <div className="text-2xl font-medium mb-5">
+              We&apos;re not just another tour company.
+            </div>
+            <div className="max-w-xl text-lg">
+              We live here. We know the mountains, the cultures, and the legends. Our adventures combine thrilling challenges with local hospitality—ensuring every step is safe, memorable, and inspiring.
+            </div>
           </div>
+        </div>
+        {/* Packages */}
+        <div className="grid grid-cols-4 gap-1.5 w-full">
+          {[...Array(4)].map((_, idx) => {
+            return (
+              <div className={`border-5 shadow-lg border-white rounded-3xl overflow-hidden relative w-full h-85 ${idx % 2 === 0 && '-mt-10'}`} key={idx}>
+                <div className="absolute inset-0 z-10 bg-gradient-to-tr from-black/25 to-black/10" />
+                <Image fill src={"/everest.jpg"} className="relative z-0 object-cover object-center" alt="Logo" />
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>
