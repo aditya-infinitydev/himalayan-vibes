@@ -1,4 +1,4 @@
-import { ArrowRight, ChevronLeft, ChevronRight, Plus, Search } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Plus, Search, Star, StarHalf } from "lucide-react";
 import Image from "next/image";
 
 const people = [
@@ -83,7 +83,7 @@ export default function Page() {
       {/* Overlay */}
       <div className="absolute inset-0 z-10 w-full h-full bg-gradient-to-r from-black/50 to-black/10" />
       {/* Content */}
-      <div className="max-w-7xl mx-auto w-[90%] relative z-20 py-30 mt-20">
+      <div className="max-w-7xl mx-auto w-[90%] relative z-20 py-30 mt-15">
         {/* People */}
         <div className="flex mb-7.5">
           {people.map((item) => (
@@ -102,16 +102,35 @@ export default function Page() {
         </div>
         {/* Heading */}
         <div className="mb-10 text-6xl font-normal text-white font-stylized tracking-tighter">
-          Explore the <span className="font-serif tracking-tight italic -ml-1">World</span> <br /> <span className="font-serif tracking-tight italic mr-0.5">Without</span> Limits
+          Your <span className="font-serif tracking-tight italic -ml-1">Himalayan</span> <br />
+          <span className="font-serif tracking-tight italic -ml-1 mr-0.5">Adventure</span> Awaits
         </div>
         {/* Input */}
-        <div className="border border-white rounded-full w-fit items-center flex p-2.5 px-7.5 pr-40 gap-5 relative backdrop-blur">
+        <div className="border border-white rounded-full w-fit items-center flex p-2.5 px-7.5 pr-40 gap-5 relative backdrop-blur mb-5">
           <div className="text-white/90">Find your dream destination</div>
           <div className="p-2.5 border border-neutral-900 text-neutral-50 btn-dark px-5 rounded-full absolute -right-[1px] flex gap-2.5">
             Search
             <Search size={20} />
           </div>
         </div>
+        {/* Social Proof */}
+        <>
+          {/* Logos */}
+          <div className="flex gap-5 -mb-5 items-center">
+            <Image width={96} height={0} src={"/trustpilot.png"} className="object-contain object-center brightness-50000 saturate-0 -ml-0.5" alt="Logo" />
+            <Image width={68} height={0} src={"/google.png"} className="object-contain object-center brightness-400 saturate-0 -ml-0.5" alt="Logo" />
+            <Image width={96} height={0} src={"/tripadvisor.png"} className="object-contain object-center brightness-50000 saturate-0 -ml-0.5" alt="Logo" />
+          </div>
+          {/* Reviews */}
+          <div className="flex gap-2.5 text-neutral-300">
+            <Star fill="currentColor" stroke="currentColor" size={18} />
+            <Star fill="currentColor" stroke="currentColor" size={18} />
+            <Star fill="currentColor" stroke="currentColor" size={18} />
+            <Star fill="currentColor" stroke="currentColor" size={18} />
+            <StarHalf fill="currentColor" stroke="currentColor" size={18} />
+            <div className="text-sm uppercase text-neutral-100">Rated 4.6 out of 5 based on 147 reviews</div>
+          </div>
+        </>
       </div>
       {/* Hero Bottom Bar */}
       <div className="absolute bottom-0 z-20 w-full py-3.5 bg-black">
