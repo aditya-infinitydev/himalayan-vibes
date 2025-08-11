@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { sans, stylized } from "@/fonts";
-import { UseLenis } from "@/utils/use-lenis";
+import { sans, serif, stylized } from "@/lib/fonts/fonts";
+import { UseLenis } from "@/lib/utils/use-lenis";
 
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sans.variable} ${stylized.variable} font-sans antialiased`}
+        className={`${sans.variable} ${stylized.variable} ${serif.variable} font-sans antialiased`}
       >
         <UseLenis />
         {children}
